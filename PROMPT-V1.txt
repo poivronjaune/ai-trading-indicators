@@ -1,0 +1,23 @@
+I want to develop a new python package that will use CSV Files as input. 
+I want you to help me write a PRD (Product Requirements Document) to help generate weel structured python code.
+
+The app is a simple package called indicators.
+Here are some elements to consider:
+- Function to download price data that is stored in data folder.
+- The file format must be a CSV file with the following columns: NotUsed,Datetime,Adj Close,Close,High,Low,Open,Volume
+- The first column will not be used so we do not worry abut it's title or it's content
+- The data must be loaded in a pandas dataframe, each row must have a unique datetime, ignore duplicates datetimes
+- The code must use the TA-Lib python package
+- Assume there is a wheel file similar to "ta_lib-0.6.4-cp313-cp313-win_amd64.whl" that must be installed using pip tools
+- We will need a TOML file to configure tha package, make sur the author is called "Robert Boivin" with email:poivronjaune@gmail.com
+- In the readme file place a note at the bottom to link to this repository to download the proper ta-lib wheel file : https://github.com/cgohlke/talib-build and explain the files are located in the release section
+- The app must offer a simple console interface to select a data folder and a filename
+- There must be an api to use the package and run it programmatically
+- Once the data is loaded, indicators must be added and then the file must saved in another folder with name of the source folder appended with "_ind", the file with indicators must be called the same as the ticker that was loaded (the soucre filename)
+- Default indicators to add : SMA and EMA with these lookback windows (5, 10, 14, 20, 50, 100, 200), bollinger bands with the most common parameters
+- Let's make sure the indicators can be called independently from one another and that we can add more later or programmatically
+- If called from command line, give feedback on progress
+
+So build a PRD document that I will use to generate an app with and I will propose it to many LLM available.
+
+The PRD must be markdown that I can cut & paste to my project as it will be distributed with the code
