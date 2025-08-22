@@ -1,3 +1,0 @@
-# (empty file, just exists in src/ind/)
-# A marker file (no content) that tells type checkers like mypy this package provides type hints.
-

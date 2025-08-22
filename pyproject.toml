@@ -1,62 +1,30 @@
-[build-system]
-requires = ["setuptools>=61.0"]
-build-backend = "setuptools.build_meta"
-
 [project]
-name = "ai-trading-indicators"
+name = "indicators"
 version = "0.1.0"
-description = "A Python package for analyzing trading indicators from ticker data."
-readme = "README.md"
-license = { file = "LICENSE" }
-requires-python = ">=3.10"
+description = "A Python library for processing financial time-series data and generating technical indicators using TA-Lib"
 authors = [
-    { name = "Robert Boivin", email = "poivronjaune@gmail.com" }
+    {name = "Robert Boivin", email = "poivronjaune@gmail.com"}
 ]
-keywords = ["trading", "indicators", "finance", "technical-analysis"]
-classifiers = [
-    "Development Status :: 3 - Alpha",
-    "Intended Audience :: Financial and Insurance Industry",
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.10",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
-]
-
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.8"
 dependencies = [
-    "pandas>=2.0",
-    "numpy>=1.25",
-    "matplotlib>=3.7",
-    "scipy>=1.11",
-    "click>=8.1",         # CLI handling
-    "tabulate>=0.9",      # optional pretty-print of results
-]
-
-[project.optional-dependencies]
-dev = [
-    "pytest>=7.0",
-    "pytest-cov>=4.0",
-    "mypy>=1.5",
-    "black>=23.0",
-    "ruff>=0.1.5",
-    "pre-commit>=3.3",
+    "pandas>=1.5.0",
+    "numpy>=1.21.0",
+    "ta-lib>=0.6.4"
 ]
 
 [project.scripts]
 indicators = "ind.cli:main"
 
-[tool.setuptools.packages.find]
-where = ["src"]
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
 
-[tool.pytest.ini_options]
-minversion = "7.0"
-addopts = "-ra -q"
-testpaths = ["tests"]
+[project.urls]
+"Homepage" = "https://github.com/yourusername/ai-trading-indicators"
+"Source" = "https://github.com/yourusername/ai-trading-indicators"
+"Tracker" = "https://github.com/yourusername/ai-trading-indicators/issues"
 
-[tool.black]
-line-length = 88
-target-version = ["py310"]
-
-[tool.ruff]
-line-length = 88
-select = ["E", "F", "I"]
-ignore = ["E501"]
+[tool.setuptools]
+packages = ["ind"]

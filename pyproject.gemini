@@ -1,0 +1,61 @@
+# pyproject.toml
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+# -------------------------------------------------------------------
+
+[project]
+name = "ind"
+version = "0.1.0"
+authors = [
+  { name = "Robert Boivin", email = "poivronjaune@gmail.com" },
+]
+description = "A Python library to process financial time-series data and generate technical indicators."
+readme = "README.md"
+license = { file = "LICENSE" } # Assumes you will add a LICENSE file with the MIT license text
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Office/Business :: Financial :: Investment",
+]
+
+# Core dependencies for the package to run
+dependencies = [
+    "pandas",
+    "numpy",
+    "TA-Lib", # The Python wrapper for the TA-Lib library
+]
+
+# -------------------------------------------------------------------
+
+[project.optional-dependencies]
+# Dependencies for development, testing, and quality assurance
+# Install with: pip install -e .[dev]
+dev = [
+    "pytest", # For running tests
+    "ruff",   # Modern linter and formatter (replaces flake8, isort, black)
+    "mypy",   # For static type checking
+]
+
+# -------------------------------------------------------------------
+
+[project.scripts]
+# This creates a command-line script when the package is installed.
+# Running 'run-indicators' in the terminal will execute the main() function in ind/cli.py
+run-indicators = "ind.cli:main"
+
+# -------------------------------------------------------------------
+
+[tool.ruff]
+# Configuration for the Ruff linter
+line-length = 88
+select = ["E", "F", "W", "I"] # Standard flake8 rules + isort
+
+[tool.mypy]
+# Configuration for the mypy type checker
+strict = true
+ignore_missing_imports = true

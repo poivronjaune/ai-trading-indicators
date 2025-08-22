@@ -21,3 +21,22 @@ Here are some elements to consider:
 So build a PRD document that I will use to generate an app with and I will propose it to many LLM available.
 
 The PRD must be markdown that I can cut & paste to my project as it will be distributed with the code
+
+
+
+
+CODE Generation
+- ChatGPT -> did not work
+I have uploaded a nice PRD and I want you to generate a python project with it. Start by showing me the folder srutcure of my project. I will have teh Readm file at the root of my project (it is called ai-trading-indicators), I want my package name inside this root folder to be ind. Generate a TOML File with proper dependencies and best practices, make sur ethere is a script section to launch a default execution of my indicator package that will prompt the user for the data folder and the filename of the ticker data. When you repsond to this query I want you to do it step by step, starting with the file folders then wait for me to ask for teh next step
+
+- Gemini -> Could not install the TOML file
+I have uploaded a nice PRD and I want you to generate a python project with it. Start by showing me the folder srutcure of my project. I will have teh Readm file at the root of my project (it is called ai-trading-indicators), I want my package name inside this root folder to be ind. Generate a TOML File with proper dependencies and best practices, make sur ethere is a script section to launch a default execution of my indicator package that will prompt the user for the data folder and the filename of the ticker data. When you repsond to this query I want you to do it step by step, starting with the file folders then wait for me to ask for teh next step
+
+
+- Claude -> unable to download
+I have uploaded a nice PRD and I want you to generate a python project with it. Start by showing me the folder srutcure of my project. I will have teh Readm file at the root of my project (it is called ai-trading-indicators), I want my package name inside this root folder to be ind. Generate a TOML File with proper dependencies and best practices, make sur ethere is a script section to launch a default execution of my indicator package that will prompt the user for the data folder and the filename of the ticker data. When you repsond to this query I want you to do it step by step, starting with the file folders then wait for me to ask for teh next step
+Reached end of conversation limit, could not download the files one by one.
+Overly complicated.
+
+- Grok
+I have uploaded a nice PRD and I want you to generate a python project with it. Start by showing me the folder srutcure of my project. I will have teh Readm file at the root of my project (it is called ai-trading-indicators), I want my package name inside this root folder to be ind. Generate a TOML File with proper dependencies and best practices, make sur ethere is a script section to launch a default execution of my indicator package that will prompt the user for the data folder and the filename of the ticker data. When you repsond to this query I want you to do it step by step, starting with the file folders then wait for me to ask for teh next step. I do not want any tests, and keep a simple architecture for our code files.
