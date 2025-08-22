@@ -1,0 +1,31 @@
+ai-trading-indicators/
+├─ README.md
+├─ LICENSE
+├─ pyproject.toml            # (we'll generate this next)
+├─ .gitignore
+├─ src/
+│  └─ ind/
+│     ├─ __init__.py
+│     ├─ __main__.py         # enables `python -m ind`
+│     ├─ py.typed            # marks package as typed
+│     ├─ cli.py              # CLI: prompts for data folder & file
+│     ├─ processor.py        # IndicatorProcessor (public API)
+│     ├─ io.py               # CSV load/save, datetime de-dupe
+│     ├─ config.py           # defaults, paths, validation
+│     ├─ types.py            # type aliases / dataclasses
+│     └─ indicators/
+│        ├─ __init__.py
+│        ├─ moving_averages.py   # SMA / EMA
+│        └─ bollinger.py         # Bollinger Bands
+├─ tests/
+│  ├─ test_cli.py
+│  ├─ test_io.py
+│  ├─ test_processor.py
+│  └─ indicators/
+│     ├─ test_moving_averages.py
+│     └─ test_bollinger.py
+├─ examples/
+│  └─ quickstart.py
+├─ data/                      # optional local samples (gitignored)
+└─ docs/
+   └─ overview.md

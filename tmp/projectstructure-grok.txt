@@ -1,0 +1,7 @@
+ai-trading-indicators/
+├── README.md
+├── pyproject.toml
+└── ind/
+    ├── init.py
+    ├── cli.py
+    └── processor.py

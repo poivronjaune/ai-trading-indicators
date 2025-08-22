@@ -1,0 +1,18 @@
+ai-trading-indicators/
+│
+├── .gitignore              # To ignore files like __pycache__, .env, etc.
+├── pyproject.toml          # Project metadata, dependencies, and scripts
+├── README.md               # Project documentation
+│
+├── data/                   # Default directory for input CSV files
+│   └── sample_ticker.csv   # An example data file
+│
+├── ind/                    # This is your main Python package
+│   ├── __init__.py         # Makes 'ind' a package
+│   ├── __main__.py         # Allows running the package with 'python -m ind'
+│   ├── core.py             # Core data processing and indicator logic
+│   └── cli.py              # Handles the command-line interface (prompts, etc.)
+│
+└── tests/                  # Directory for all your tests
+    ├── __init__.py         # Makes 'tests' a package
+    └── test_core.py        # Unit tests for your core logic

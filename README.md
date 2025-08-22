@@ -1,5 +1,9 @@
 # AI Trading Indicators
 
+>**Warning**  
+>Work in progress, not production ready, poor documentation :)  
+>This project was generated from AI Agents. Unsuccessful generations are stored in folders and filenames with the _chatgpt or .chatgpt extensions. Current release is under the ind folder. 
+
 ## Overview
 
 The **Indicators** package is a Python library designed to process financial time-series data stored in CSV files and generate technical indicators using the TA-Lib library. It provides both a command-line interface (CLI) for interactive use and a programmatic API for integration into other applications.
