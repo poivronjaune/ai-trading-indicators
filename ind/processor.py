@@ -1,3 +1,5 @@
+# GEMINI Fixed FutureWarnings
+
 import pandas as pd
 import numpy as np
 import talib
